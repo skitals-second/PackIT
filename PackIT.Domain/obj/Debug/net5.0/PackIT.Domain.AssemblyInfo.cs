@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PackIT.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3fc8a04d1159151944f6e0f98ab842eaef31a33c")]
 [assembly: System.Reflection.AssemblyProductAttribute("PackIT.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PackIT.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
