@@ -12,6 +12,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using PackIT.Application;
+using PackIT.Infrastructure.Queries;
 
 namespace PackIT.Api
 {
@@ -28,6 +29,7 @@ namespace PackIT.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddApplication();
+            services.AddInfrastructure();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

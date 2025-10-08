@@ -22,6 +22,11 @@ namespace PackIT.Domain.Entities
             _items = items;
         }
 
+        private PackingList()
+        {
+            
+        }
+
         internal PackingList(PackingListId id, PackingListName name, Localization localization)
         {
             Id = id;
