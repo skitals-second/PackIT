@@ -9,6 +9,6 @@ namespace PackIT.Infrastructure.EF.Models
         public uint Quantity { get; set; }
         public bool IsPacked { get; set; }
 
-        public PackingItemReadModel PackingList { get; set; }
+        public PackingListReadModel PackingList { get; set; }
     }
 }

@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using PackIT.Infrastructure.EF.Config;
 using PackIT.Infrastructure.EF.Models;
 
 namespace PackIT.Infrastructure.EF.Contexts
@@ -15,7 +16,10 @@ namespace PackIT.Infrastructure.EF.Contexts
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.HasDefaultSchema("packing");
-            base.OnModelCreating(modelBuilder);
+
+            var configuration = new ReadConfiguration();
+            modelBuilder.ApplyConfiguration<PackingListReadModel>(configuration);
+            modelBuilder.ApplyConfiguration<PackingItemReadModel>(configuration);
         }
     }
 }
