@@ -9,7 +9,7 @@ namespace PackIT.Infrastructure.EF.Contexts
     {
         public DbSet<PackingList> PackingList { get; set; }
 
-        public WriteDbContext(DbContextOptions<ReadDbContext> options) : base(options)
+        public WriteDbContext(DbContextOptions<WriteDbContext> options) : base(options)
         {
             
         }
