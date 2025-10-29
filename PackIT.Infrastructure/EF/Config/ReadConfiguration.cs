@@ -8,7 +8,7 @@ namespace PackIT.Infrastructure.EF.Config
     {
         public void Configure(EntityTypeBuilder<PackingListReadModel> builder)
         {
-            builder.ToTable("PackingList");
+            builder.ToTable("PackingLists");
             builder.HasKey(pl => pl.Id);
 
             builder
@@ -22,7 +22,7 @@ namespace PackIT.Infrastructure.EF.Config
 
         public void Configure(EntityTypeBuilder<PackingItemReadModel> builder)
         {
-            builder.ToTable("PackingItem");
+            builder.ToTable("PackingItems");
         }
     }
 }

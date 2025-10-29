@@ -10,7 +10,7 @@ using PackIT.Infrastructure.EF.Contexts;
 namespace PackIT.Infrastructure.EF.Migrations
 {
     [DbContext(typeof(ReadDbContext))]
-    [Migration("20251013214940_Init_Read")]
+    [Migration("20251029212353_Init_Read")]
     partial class Init_Read
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -44,7 +44,7 @@ namespace PackIT.Infrastructure.EF.Migrations
 
                     b.HasIndex("PackingListId");
 
-                    b.ToTable("PackingItem");
+                    b.ToTable("PackingItems");
                 });
 
             modelBuilder.Entity("PackIT.Infrastructure.EF.Models.PackingListReadModel", b =>
@@ -64,7 +64,7 @@ namespace PackIT.Infrastructure.EF.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("PackingList");
+                    b.ToTable("PackingLists");
                 });
 
             modelBuilder.Entity("PackIT.Infrastructure.EF.Models.PackingItemReadModel", b =>

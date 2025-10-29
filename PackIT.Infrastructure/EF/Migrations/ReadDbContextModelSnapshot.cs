@@ -42,7 +42,7 @@ namespace PackIT.Infrastructure.EF.Migrations
 
                     b.HasIndex("PackingListId");
 
-                    b.ToTable("PackingItem");
+                    b.ToTable("PackingItems");
                 });
 
             modelBuilder.Entity("PackIT.Infrastructure.EF.Models.PackingListReadModel", b =>
@@ -62,7 +62,7 @@ namespace PackIT.Infrastructure.EF.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("PackingList");
+                    b.ToTable("PackingLists");
                 });
 
             modelBuilder.Entity("PackIT.Infrastructure.EF.Models.PackingItemReadModel", b =>

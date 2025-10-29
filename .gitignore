@@ -7,3 +7,7 @@ Debug/
 Release/
 Bin/
 Obj/
+# Ignore Rider folder
+.idea
+# Ignore User Solution file
+*.user
