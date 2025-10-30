@@ -21,7 +21,7 @@ namespace PackIT.Api.Controllers
             _queryDispatcher = queryDispatcher;
         }
 
-        [HttpGet("{id:guid}")]
+        [HttpGet("{Id:guid}")]
         public async Task<ActionResult<PackingListDto>> Get([FromRoute] GetPackingList query)
         {
             var result = await _queryDispatcher.QueryAsync(query);
@@ -45,7 +45,7 @@ namespace PackIT.Api.Controllers
             return CreatedAtAction(nameof(Get), new { id = command.Id }, null);
         }
         
-        [HttpPut("{packingListId:guid}/items")]
+        [HttpPut("{PackingListId:guid}/items")]
         public async Task<IActionResult> Put([FromBody] AddPackingItem command)
         {
             await _commandDispatcher.DispatchAsync(command);
@@ -53,7 +53,7 @@ namespace PackIT.Api.Controllers
             return Ok();
         }
         
-        [HttpPut("{packingListId:guid}/items/{name}/pack")]
+        [HttpPut("{PackingListId:guid}/items/{Name}/pack")]
         public async Task<IActionResult> Put([FromBody] PackItem command)
         {
             await _commandDispatcher.DispatchAsync(command);
@@ -61,7 +61,7 @@ namespace PackIT.Api.Controllers
             return Ok();
         }
         
-        [HttpDelete("{packingListId:guid}/items/{name}")]
+        [HttpDelete("{PackingListId:guid}/items/{Name}")]
         public async Task<IActionResult> Delete([FromBody] RemovePackingItem command)
         {
             await _commandDispatcher.DispatchAsync(command);
@@ -69,7 +69,7 @@ namespace PackIT.Api.Controllers
             return Ok();
         }
         
-        [HttpDelete("{id:guid}")]
+        [HttpDelete("{Id:guid}")]
         public async Task<IActionResult> Delete([FromBody] RemovePackingList command)
         {
             await _commandDispatcher.DispatchAsync(command);
