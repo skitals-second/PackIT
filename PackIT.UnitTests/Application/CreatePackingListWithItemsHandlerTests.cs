@@ -3,7 +3,6 @@ using System.Threading.Tasks;
 using NSubstitute;
 using PackIT.Application.Commands;
 using PackIT.Application.Commands.Handlers;
-using PackIT.Application.DTO;
 using PackIT.Application.DTO.External;
 using PackIT.Application.Exceptions;
 using PackIT.Application.Services;
@@ -24,7 +23,7 @@ namespace PackIT.UnitTests.Application
             => _commandHandler.HandleAsync(command);
 
         [Fact]
-        public async Task HandleAsync_Throws_PachingListAlreadyExistsException_When_List_With_same_Name_Already_Exists()
+        public async Task HandleAsync_Throws_PackingListAlreadyExistsException_When_List_With_same_Name_Already_Exists()
         {
             var command = new CreatePackingListWithItems(Guid.NewGuid(), "MyList", 10, Gender.Female, default);
             _readService.ExistsByNameAsync(command.Name).Returns(true);
